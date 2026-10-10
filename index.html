@@ -1,0 +1,1073 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roko Pet - Comederos Personalizados</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.0/font/bootstrap-icons.css">
+</head>
+<body>
+
+    <!-- ENCABEZADO -->
+    <header>
+        <img src="img/banner.jpg" alt="Comederos Roko Pet" class="banner-img">
+        <div class="logo-superpuesto">
+            <img src="img/roko-logo.jpeg" alt="Roko Pet" class="logo-img">
+        </div>
+    </header>
+
+    <!-- MENÚ DE NAVEGACIÓN -->
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color: #4a3525;">
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menuRokoPet" aria-controls="menuRokoPet" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse justify-content-center" id="menuRokoPet">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#bowls">Bowls</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#scoops">Scoops</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#accesorios">Accesorios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#personalizar">Personalizar</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#nosotros">Nosotros</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                    <li class="nav-item">
+                        <a class="nav-link position-relative" href="#" onclick="abrirCarrito(); return false;">
+                            <i class="bi bi-cart3"></i> Carrito
+                            <span id="contador-carrito" class="badge bg-success rounded-pill position-absolute top-0 start-100 translate-middle" style="display:none;">0</span>
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- SECCIÓN DE PRODUCTOS -->
+    <main class="container my-5">
+
+        <!-- BOWLS -->
+        <section class="categoria" id="bowls">
+            <h2 class="categoria-titulo"> Bowls</h2>
+
+            <!-- Classic -->
+            <div class="subcategoria">
+                <h3 class="subcategoria-titulo">Classic</h3>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/classic-large-101.jpeg" class="card-img-top" alt="Classic Large 101"
+                                 onclick="abrirModal('Classic Large 101','img/paleta-colores.jpeg',['Medidas: 14 cm alto x 19 cm diámetro','Material: PLA','Incluye plato de acero inoxidable','Capacidad útil: 3 litros','Base antideslizante','Fácil de limpiar'],'$95.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Classic Large 101</h5>
+                                <p class="card-text">Soporte cónico grande con plato de acero inoxidable.</p>
+                                <p class="precio mt-auto">$77.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Classic Large 101', 77000, 'img/classic-large-101.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Classic%20Large%20101" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/classic-extralarge-102.jpeg" class="card-img-top" alt="Classic Extra Large 102"
+                                 onclick="abrirModal('Classic Extra Large 102','img/paleta-colores.jpeg',['Medidas: 25 cm alto x 21 cm diámetro','Material: PLA','Incluye plato de acero inoxidable','Capacidad útil: 6 litros','Base antideslizante','Fácil de limpiar'],'$50.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Classic Extra Large 102</h5>
+                                <p class="card-text">Soporte cónico grande con plato de acero inoxidable.</p>
+                                <p class="precio mt-auto">$190.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Classic Extra Large 102', 190000, 'img/classic-extralarge-102.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Classic%20Extra%20Large%20102" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/classic-medium-103.jpeg" class="card-img-top" alt="Classic Medium 103"
+                                 onclick="abrirModal('Classic Medium 103','img/paleta-colores.jpeg',['Medidas: 7 cm alto x 11 cm diámetro','Material: PLA','Incluye plato de acero inoxidable','Capacidad útil: 600 ml','Base antideslizante','Fácil de limpiar'],'$48.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Classic Medium 103</h5>
+                                <p class="card-text">Soporte cónico mediano, ideal para razas medianas.</p>
+                                <p class="precio mt-auto">$50.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Classic Medium 103', 50000, 'img/classic-medium-103.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Classic%20Medium%20103" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/classic-medium-104.jpeg" class="card-img-top" alt="Classic Medium 104"
+                                 onclick="abrirModal('Classic Medium 104','img/paleta-colores.jpeg',['Medidas: 17 cm alto x 20 cm diámetro y 10 cm alto x 12.5 cm diámetro','Material: PLA','Incluye plato de acero inoxidable','Capacidad útil: 4.2 litros y 900 ml','Base antideslizante','Fácil de limpiar'],'$85.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Classic Medium 104</h5>
+                                <p class="card-text">Soporte cónico mediano, ideal para razas medianas.</p>
+                                <p class="precio mt-auto">$69.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Classic Medium 104', 69000, 'img/classic-medium-104.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Classic%20Medium%20104" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Bubble -->
+            <div class="subcategoria">
+                <h3 class="subcategoria-titulo">Bubble</h3>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/bubble-ribed-109.jpeg" class="card-img-top" alt="Bubble Ribbed 109"
+                                 onclick="abrirModal('Bubble Ribbed 109','img/paleta-colores.jpeg',['Medidas: 9 cm alto x 13 cm diámetro','Material: PLA','Plato de acero incluido','Capacidad útil: 900 ml','Base antideslizante'],'$70.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Bubble Ribbed 109</h5>
+                                <p class="card-text">Diseño con textura burbuja acanalada. Edición especial.</p>
+                                <p class="precio mt-auto">$70.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Bubble Ribbed 109', 70000, 'img/bubble-ribed-109.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Bubble%20Ribbed%20109" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/bubble-ribed-110.jpeg" class="card-img-top" alt="Bubble Ribbed 110"
+                                 onclick="abrirModal('Bubble Ribbed 110','img/paleta-colores.jpeg',['Medidas: 18 cm alto x 12.5 cm diámetro','Material: PLA','Plato de acero incluido','Capacidad: 1.7 litros','Base antideslizante'],'$74.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Bubble Ribbed 110</h5>
+                                <p class="card-text">Textura burbuja con acabado premium y plato de acero.</p>
+                                <p class="precio mt-auto">$84.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Bubble Ribbed 110', 84000, 'img/bubble-ribed-110.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Bubble%20Ribbed%20110" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/bubble-ribed-111.jpeg" class="card-img-top" alt="Bubble Ribbed 111"
+                                 onclick="abrirModal('Bubble Ribbed 111','img/paleta-colores.jpeg',['Medidas: 8.5 cm alto x 13 cm diámetro','Material: PLA','Plato de acero incluido','Capacidad: 900 ml','Base antideslizante'],'$53.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Bubble Ribbed 111</h5>
+                                <p class="card-text">Diseño acanalado con base antideslizante integrada.</p>
+                                <p class="precio mt-auto">$60.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Bubble Ribbed 111', 60000, 'img/bubble-ribed-111.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Bubble%20Ribbed%20111" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/bubble-ribed-112.jpeg" class="card-img-top" alt="Bubble Ribbed 112"
+                                 onclick="abrirModal('Bubble Ribbed 112','img/paleta-colores.jpeg',['Medidas: 4 cm alto x 12 cm diámetro','Material: PLA','Plato de acero incluido','Capacidad: 450 ml','Base antideslizante'],'$51.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Bubble Ribbed 112</h5>
+                                <p class="card-text">Textura burbuja única, resistente y fácil de limpiar.</p>
+                                <p class="precio mt-auto">$57.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Bubble Ribbed 112', 57000, 'img/bubble-ribed-112.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Bubble%20Ribbed%20112" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Duo -->
+            <div class="subcategoria">
+                <h3 class="subcategoria-titulo">Duo</h3>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/duo-ribed-113.jpeg" class="card-img-top" alt="Duo Ribbed 113"
+                                 onclick="abrirModal('Duo Ribbed 113','img/paleta-colores.jpeg',['Medidas: 10 cm alto x 11.6 cm diámetro','Material: PLA','2 platos de acero inoxidable','Capacidad: 800 ml por plato','Textura acanalada premium'],'$100.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Duo Ribbed 113</h5>
+                                <p class="card-text">Doble compartimento con textura acanalada premium.</p>
+                                <p class="precio mt-auto">$100.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Duo Ribbed 113', 100000, 'img/duo-ribed-113.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Duo%20Ribbed%20113" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/duo-114.jpeg" class="card-img-top" alt="Duo 114"
+                                 onclick="abrirModal('Duo 114','img/paleta-colores.jpeg',['Medidas: 8.5 cm alto x 11.4 cm diámetro','Material: PLA','2 platos de acero inoxidable','Capacidad: 700 ml por plato','Base antideslizante'],'$100.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Duo 114</h5>
+                                <p class="card-text">Dos compartimentos para comida y agua en un solo soporte.</p>
+                                <p class="precio mt-auto">$120.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Duo 114', 120000, 'img/duo-114.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Duo%20114" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/duo-115.jpeg" class="card-img-top" alt="Duo 115"
+                                 onclick="abrirModal('Duo 115','img/paleta-colores.jpeg',['Medidas: 6 cm alto x 12 cm diámetro','Material: PLA','2 platos de acero inoxidable','Capacidad: 500 ml por plato','Base antideslizante'],'$85.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Duo 115</h5>
+                                <p class="card-text">Doble compartimento con platos de acero inoxidable.</p>
+                                <p class="precio mt-auto">$90.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Duo 115', 90000, 'img/duo-115.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Duo%20115" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/duo-116.jpeg" class="card-img-top" alt="Duo 116"
+                                 onclick="abrirModal('Duo 116','img/paleta-colores.jpeg',['Medidas: 4 cm alto x 13.4 cm diámetro','Material: PLA','2 platos de acero inoxidable','Capacidad: 500 ml por plato','Diseño minimalista'],'$97.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Duo 116</h5>
+                                <p class="card-text">Comedero doble con diseño minimalista y moderno.</p>
+                                <p class="precio mt-auto">$98.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Duo 116', 98000, 'img/duo-116.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Duo%20116" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Wave -->
+            <div class="subcategoria">
+                <h3 class="subcategoria-titulo">Wave</h3>
+                <div class="row g-4">
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/ribbed-wave-105.jpeg" class="card-img-top" alt="Wave Ribbed 105"
+                                 onclick="abrirModal('Wave Ribbed 105','img/paleta-colores.jpeg',['Medidas: 18 cm x 18 cm x 9 cm','Material: PLA','Plato de acero inoxidable','Capacidad: 800 ml','Diseño ondulado'],'$88.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Wave Ribbed 105</h5>
+                                <p class="card-text">Diseño ondulado, moderno y elegante.</p>
+                                <p class="precio mt-auto">$88.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Wave Ribbed 105', 88000, 'img/ribbed-wave-105.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Wave%20Ribbed%20105" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/wave-ribbed-106.jpeg" class="card-img-top" alt="Wave Ribbed 106"
+                                 onclick="abrirModal('Wave Ribbed 106','img/paleta-colores.jpeg',['Medidas: 18 cm x 18 cm x 9 cm','Material: PLA','Plato de acero inoxidable','Capacidad: 800 ml','Diseño ondulado'],'$95.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Wave Ribbed 106</h5>
+                                <p class="card-text">Diseño ondulado, moderno y elegante.</p>
+                                <p class="precio mt-auto">$95.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Wave Ribbed 106', 95000, 'img/wave-ribbed-106.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Wave%20Ribbed%20106" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/wave-107.jpeg" class="card-img-top" alt="Wave 107"
+                                 onclick="abrirModal('Wave 107','img/paleta-colores.jpeg',['Medidas: 18 cm x 18 cm x 9 cm','Material: PLA','Plato de acero inoxidable','Capacidad: 800 ml','Diseño ondulado'],'$73.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Wave 107</h5>
+                                <p class="card-text">Diseño ondulado, moderno y elegante.</p>
+                                <p class="precio mt-auto">$79.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Wave 107', 79000, 'img/wave-107.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Wave%20107" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/wave-108.jpeg" class="card-img-top" alt="Wave 108"
+                                 onclick="abrirModal('Wave 108','img/paleta-colores.jpeg',['Medidas: 18 cm x 18 cm x 9 cm','Material: PLA','Plato de acero inoxidable','Capacidad: 800 ml','Acabado premium'],'$96.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Wave 108</h5>
+                                <p class="card-text">Textura ondulada con acabado premium.</p>
+                                <p class="precio mt-auto">$100.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Wave 108', 100000, 'img/wave-108.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Wave%20108" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 col-md-6 col-lg-4">
+                        <div class="card h-100 shadow-sm producto-card">
+                            <img src="img/wave-109.jpeg" class="card-img-top" alt="Wave Ribbed 109"
+                                 onclick="abrirModal('Wave Ribbed 109','img/paleta-colores.jpeg',['Medidas: 18 cm x 18 cm x 9 cm','Material: PLA','Plato de acero inoxidable','Capacidad: 800 ml','Diseño de olas'],'$88.000 COP','')">
+                            <div class="card-body text-center d-flex flex-column">
+                                <h5 class="card-title">Wave Ribbed 109</h5>
+                                <p class="card-text">Diseño de olas con plato de acero inoxidable.</p>
+                                <p class="precio mt-auto">$78.000 COP</p>
+                                <div class="d-flex gap-2 mt-2">
+                                    <button onclick="agregarAlCarrito('Wave Ribbed 109', 78000, 'img/wave-109.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Wave%20Ribbed%20109" class="btn btn-success flex-fill">WhatsApp</a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SCOOPS -->
+        <section class="categoria" id="scoops">
+            <h2 class="categoria-titulo"> Scoops</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/scoop-05.jpeg" class="card-img-top" alt="Scoop 05"
+                             onclick="abrirModal('Scoop 05','img/paleta-colores.jpeg',['Medidas: 12 cm x 6 cm x 4 cm','Material: PLA','Capacidad: 250 ml','Apto para alimento seco','Fácil de limpiar'],'$30.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Scoop 05</h5>
+                            <p class="card-text">Cuchara medidora para alimento seco. Capacidad 250 ml.</p>
+                            <p class="precio mt-auto">$31.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Scoop 05', 31000, 'img/scoop-05.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Scoop%2005" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/scoop-06.jpeg" class="card-img-top" alt="Scoop 06"
+                             onclick="abrirModal('Scoop 06','img/paleta-colores.jpeg',['Medidas: 14 cm x 7 cm x 4 cm','Material: PLA','Capacidad: 350 ml','Apto para alimento seco','Fácil de limpiar'],'$35.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Scoop 06</h5>
+                            <p class="card-text">Cuchara medidora de 350 ml, ideal para razas medianas.</p>
+                            <p class="precio mt-auto">$37.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Scoop 06', 37000, 'img/scoop-06.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Scoop%2006" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/scoop-07.jpeg" class="card-img-top" alt="Scoop 04"
+                             onclick="abrirModal('Scoop 04','img/paleta-colores.jpeg',['Medidas: 10 cm x 5 cm x 3 cm','Material: PLA','Capacidad: 200 ml','Apto para alimento seco','Compacta'],'$25.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Scoop 07</h5>
+                            <p class="card-text">Cuchara medidora de 200 ml, compacta y resistente.</p>
+                            <p class="precio mt-auto">$33.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Scoop 04', 33000, 'img/scoop-07.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Scoop%2004" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/scoop-08.jpg" class="card-img-top" alt="Scoop 08"
+                             onclick="abrirModal('Scoop 08','img/paleta-colores.jpeg',['Medidas: 16 cm x 8 cm x 5 cm','Material: PLA','Capacidad: 500 ml','Apto para razas grandes','Fácil de limpiar'],'$40.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Scoop 08</h5>
+                            <p class="card-text">Cuchara medidora de 500 ml, para razas grandes.</p>
+                            <p class="precio mt-auto">$32.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Scoop 08', 32000, 'img/scoop-08.jpg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Scoop%2008" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ACCESORIOS -->
+        <section class="categoria" id="accesorios">
+            <h2 class="categoria-titulo"> Accesorios</h2>
+            <div class="row g-4">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/llavero-huella-nombre.jpeg" class="card-img-top" alt="Llavero Huella Nombre"
+                             onclick="abrirModal('Llavero Huella Nombre','img/paleta-colores.jpeg',['Medidas: 5 cm x 5 cm x 0.5 cm','Material: PLA','Personalizado con nombre','Huella en relieve','Ligero y resistente'],'$20.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Llavero Huella Nombre</h5>
+                            <p class="card-text">Llavero personalizado con huella y nombre de tu mascota.</p>
+                            <p class="precio mt-auto">$30.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Llavero Huella Nombre', 30000, 'img/llavero-huella-nombre.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Llavero%20Huella" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/placa-hueso-huella.jpeg" class="card-img-top" alt="Placa Hueso Huella"
+                             onclick="abrirModal('Placa Hueso Huella','img/paleta-colores.jpeg',['Medidas: 6 cm x 3 cm x 0.4 cm','Material: PLA','Forma de hueso','Personalizada con nombre','Incluye argolla'],'$25.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Placa Hueso Huella</h5>
+                            <p class="card-text">Placa de identificación con forma de hueso y huella.</p>
+                            <p class="precio mt-auto">$30.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Placa Hueso Huella', 30000, 'img/placa-hueso-huella.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20la%20Placa%20Hueso%20Huella" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/porta-bolsas.jpeg" class="card-img-top" alt="Porta Bolsas"
+                             onclick="abrirModal('Porta Bolsas','img/paleta-colores.jpeg',['Medidas: 8 cm x 5 cm x 5 cm','Material: PLA','Incluye mosquetón','Capacidad: 15 bolsas','Diseño compacto'],'$30.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Porta Bolsas</h5>
+                            <p class="card-text">Dispensador de bolsas para paseo, con mosquetón.</p>
+                            <p class="precio mt-auto">$30.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Porta Bolsas', 30000, 'img/porta-bolsas.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Porta%20Bolsas" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/rascador-cactus.jpeg" class="card-img-top" alt="Rascador Cactus"
+                             onclick="abrirModal('Rascador Cactus','img/paleta-colores.jpeg',['Medidas: 30 cm x 15 cm x 15 cm','Material: PLA','Forma de cactus','Para gatos','Base estable'],'$45.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Rascador Cactus</h5>
+                            <p class="card-text">Rascador decorativo con forma de cactus para gatos.</p>
+                            <p class="precio mt-auto">$50.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Rascador Cactus', 50000, 'img/rascador-cactus.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Rascador%20Cactus" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/juguete-bola-infinita.jpeg" class="card-img-top" alt="Juguete bola infinita"
+                             onclick="abrirModal('Juguete Bola Infinita','img/paleta-colores.jpeg',['Medidas: 8 cm x 8 cm x 8 cm','Material: PLA','Bola infinita incluida','Para perros y gatos','Colores variados'],'$55.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Juguete bola infinita</h5>
+                            <p class="card-text">Juguete interactivo tipo bola infinita incluida.</p>
+                            <p class="precio mt-auto">$50.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Juguete Bola Infinita', 50000, 'img/juguete-bola-infinita.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Juguete%20Bola%20Infinita" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card h-100 shadow-sm producto-card">
+                        <img src="img/collar-personalizado.jpeg" class="card-img-top" alt="Collar personalizado"
+                             onclick="abrirModal('Collar Personalizado','img/paleta-colores.jpeg',['Medidas: 30 cm de largo ajustable','Material: PLA + cinta','Personalizado con nombre','Hebilla de seguridad','Colores variados'],'$15.000 COP','')">
+                        <div class="card-body text-center d-flex flex-column">
+                            <h5 class="card-title">Collar personalizado</h5>
+                            <p class="card-text">Letras decorativas con el nombre de tu mascota.</p>
+                            <p class="precio mt-auto">$20.000 COP</p>
+                            <div class="d-flex gap-2 mt-2">
+                                <button onclick="agregarAlCarrito('Collar Personalizado', 20000, 'img/collar-personalizado.jpeg')" class="btn btn-outline-success flex-fill"><i class="bi bi-cart-plus"></i> Agregar</button>
+                                <a href="https://wa.me/573213029272?text=Hola,%20quiero%20el%20Collar%20Personalizado" class="btn btn-success flex-fill">WhatsApp</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ============================================ -->
+<!-- SECCIÓN: PERSONALIZAR COMEDERO                -->
+<!-- ============================================ -->
+<section class="personalizar py-5" id="personalizar">
+    <div class="container">
+        <h2 class="personalizar-titulo">✨ Personaliza tu Comedero</h2>
+        <p class="personalizar-subtitulo">
+            Escoge el producto, el color, escribe el nombre de tu mascota y elige el tipo de letra.
+        </p>
+        
+        <div class="row justify-content-center">
+            <div class="col-12 col-lg-10">
+                <div class="personalizar-card">
+                    <div class="row g-4">
+                        
+                        <!-- COLUMNA IZQUIERDA: Vista previa -->
+                        <div class="col-12 col-md-6">
+                            <div class="vista-previa-contenedor">
+                                <p class="vista-previa-label">Vista previa:</p>
+                                
+                                <div class="vista-previa-imagen">
+                                    <div class="fondo-color" id="fondo-color">
+                                        <div class="nombre-superpuesto" id="nombre-superpuesto">Tu mascota</div>
+                                    </div>
+                                </div>
+                                
+                                <div class="color-seleccionado" id="color-seleccionado">
+                                    Color: <strong>No seleccionado</strong>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- COLUMNA DERECHA: Formulario -->
+                        <div class="col-12 col-md-6">
+                            
+                            <!-- Selector de producto -->
+                            <div class="mb-3">
+                                <label for="producto-personalizar" class="form-label">
+                                    <i class="bi bi-box-seam me-2"></i>Producto
+                                </label>
+                                <select id="producto-personalizar" class="form-select" onchange="actualizarVistaPrevia()">
+                                    <option value="">-- Selecciona un producto --</option>
+                                    <option value="Classic Large 101" data-precio="95000" data-imagen="img/classic-large-101.jpeg">Classic Large 101 - $95.000</option>
+                                    <option value="Classic Extra Large 102" data-precio="50000" data-imagen="img/classic-extralarge-102.jpeg">Classic Extra Large 102 - $50.000</option>
+                                    <option value="Classic Medium 103" data-precio="48000" data-imagen="img/classic-medium-103.jpeg">Classic Medium 103 - $48.000</option>
+                                    <option value="Bubble Ribbed 109" data-precio="70000" data-imagen="img/bubble-ribed-109.jpeg">Bubble Ribbed 109 - $70.000</option>
+                                    <option value="Bubble Ribbed 110" data-precio="74000" data-imagen="img/bubble-ribed-110.jpeg">Bubble Ribbed 110 - $74.000</option>
+                                    <option value="Duo 114" data-precio="100000" data-imagen="img/duo-114.jpeg">Duo 114 - $100.000</option>
+                                    <option value="Duo 115" data-precio="85000" data-imagen="img/duo-115.jpeg">Duo 115 - $85.000</option>
+                                    <option value="Wave 107" data-precio="73000" data-imagen="img/wave-107.jpeg">Wave 107 - $73.000</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Selector de color -->
+                            <div class="mb-3">
+                                <label class="form-label">
+                                    <i class="bi bi-palette me-2"></i>Color del comedero
+                                </label>
+                                <div class="selector-color" id="selector-color">
+                                    <button type="button" class="color-btn" data-color="Beige" style="background-color: #d4c5a9;" title="Beige" onclick="seleccionarColor('Beige', this)"></button>
+                                    <button type="button" class="color-btn" data-color="Verde oliva" style="background-color: #6b7a4a;" title="Verde oliva" onclick="seleccionarColor('Verde oliva', this)"></button>
+                                    <button type="button" class="color-btn" data-color="Marrón" style="background-color: #8b6f47;" title="Marrón" onclick="seleccionarColor('Marrón', this)"></button>
+                                    <button type="button" class="color-btn" data-color="Negro" style="background-color: #333333;" title="Negro" onclick="seleccionarColor('Negro', this)"></button>
+                                    <button type="button" class="color-btn" data-color="Gris" style="background-color: #999999;" title="Gris" onclick="seleccionarColor('Gris', this)"></button>
+                                    <button type="button" class="color-btn" data-color="Azul" style="background-color: #4a6fa5;" title="Azul" onclick="seleccionarColor('Azul', this)"></button>
+                                    <button type="button" class="color-btn" data-color="Rosa" style="background-color: #e8a5b8;" title="Rosa" onclick="seleccionarColor('Rosa', this)"></button>
+                                    <button type="button" class="color-btn" data-color="Amarillo" style="background-color: #f0d264;" title="Amarillo" onclick="seleccionarColor('Amarillo', this)"></button>
+                                </div>
+                            </div>
+                            
+                            <!-- Campo del nombre -->
+                            <div class="mb-3">
+                                <label for="nombre-mascota" class="form-label">
+                                    <i class="bi bi-pencil me-2"></i>Nombre de tu mascota
+                                </label>
+                                <input type="text" id="nombre-mascota" class="form-control" 
+                                       placeholder="Ej: Roko, Luna, Max..." 
+                                       maxlength="12"
+                                       oninput="actualizarVistaPrevia()">
+                                <small class="text-muted">Máximo 12 caracteres</small>
+                            </div>
+                            
+                            <!-- Selector de tipografía -->
+                            <div class="mb-3">
+                                <label for="tipografia" class="form-label">
+                                    <i class="bi bi-fonts me-2"></i>Tipo de letra
+                                </label>
+                                <select id="tipografia" class="form-select" onchange="actualizarVistaPrevia()">
+                                    <option value="'Segoe UI', sans-serif">Moderna (sans-serif)</option>
+                                    <option value="'Georgia', serif">Elegante (serif)</option>
+                                    <option value="'Courier New', monospace">Técnica (monospace)</option>
+                                    <option value="'Brush Script MT', cursive">Manuscrita (cursive)</option>
+                                    <option value="'Impact', sans-serif">Impacto (bold)</option>
+                                    <option value="'Trebuchet MS', sans-serif">Amigable (rounded)</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Precio total -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span>Total:</span>
+                                <strong id="precio-personalizado" class="precio">$0 COP</strong>
+                            </div>
+                            
+                            <!-- Botón agregar -->
+                            <button onclick="agregarPersonalizado()" class="btn btn-success w-100">
+                                <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                            </button>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+    </main>
+
+    <!-- MODAL DE PRODUCTO -->
+    <div id="modal-producto" class="modal">
+        <div class="modal-contenido">
+            <span class="modal-cerrar" onclick="cerrarModal()">&times;</span>
+            <h2 id="modal-titulo">Nombre del producto</h2>
+            <div class="modal-imagen-medidas" id="modal-imagen-container">
+                <img id="modal-imagen" src="" alt="Medidas del producto">
+            </div>
+            <div class="modal-caracteristicas">
+                <h3>Características</h3>
+                <ul id="modal-lista"></ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL DEL CARRITO -->
+    <div id="modal-carrito" class="modal">
+        <div class="modal-contenido modal-carrito-contenido">
+            <span class="modal-cerrar" onclick="cerrarCarrito()">&times;</span>
+            <h2>🛒 Tu Carrito</h2>
+            <div id="carrito-vacio" class="text-center py-4">
+                <p class="text-muted">Tu carrito está vacío.</p>
+                <p class="text-muted small">Agrega productos desde la tienda.</p>
+            </div>
+            <div id="carrito-items"></div>
+            <div id="carrito-resumen" class="carrito-resumen" style="display:none;">
+                <hr>
+                <div class="d-flex justify-content-between mb-2">
+                    <span>Subtotal:</span>
+                    <strong id="carrito-subtotal">$0 COP</strong>
+                </div>
+                <div class="d-flex justify-content-between mb-3">
+                    <span>Total:</span>
+                    <strong id="carrito-total" class="precio">$0 COP</strong>
+                </div>
+                <h5 class="mt-4 mb-3">Formas de pago</h5>
+                <div class="formas-pago">
+                    <label class="forma-pago">
+                        <input type="radio" name="pago" value="whatsapp" checked>
+                        <span>📱 Pedir por WhatsApp</span>
+                    </label>
+                    <label class="forma-pago">
+                        <input type="radio" name="pago" value="transferencia">
+                        <span>🏦 Transferencia bancaria (Nequi / Daviplata)</span>
+                    </label>
+                    <label class="forma-pago">
+                        <input type="radio" name="pago" value="contraentrega">
+                        <span>💵 Pago contra entrega (solo Bogotá)</span>
+                    </label>
+                </div>
+                <button onclick="finalizarCompra()" class="btn btn-success w-100 mt-3">
+                    <i class="bi bi-check-circle me-2"></i>Finalizar compra
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="sobre-nosotros py-5" id="nosotros">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-12 col-md-6 mb-4 mb-md-0">
+                    <img src="img/roko-logo.jpeg" alt="Logo Roko Pet" class="img-fluid rounded shadow">
+                </div>
+                <div class="col-12 col-md-6">
+                    <h2 class="sobre-titulo">Sobre Nosotros</h2>
+                    <p class="sobre-texto"><strong>Roko Pet</strong> nació del amor por Roko, nuestra mascota, y de la idea de crear comederos únicos y personalizados para cada peludito.</p>
+                    <p class="sobre-texto">Cada comedero es diseñado e impreso en 3D con materiales de grado alimenticio, pensando en la comodidad, la higiene y el estilo de tu mejor amigo.</p>
+                    <p class="sobre-texto">Nos encanta ver cómo cada mascota disfruta su comida en un comedero hecho especialmente para él.</p>
+                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20saber%20más%20sobre%20Roko%20Pet" class="btn btn-success mt-3">
+                        <i class="bi bi-whatsapp me-2"></i>Contáctanos
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section class="contacto py-5" id="contacto">
+        <div class="container text-center">
+            <h2 class="contacto-titulo">Contáctanos</h2>
+            <p class="contacto-texto mb-4">¿Tienes preguntas? ¿Quieres un comedero personalizado? ¡Escríbenos!</p>
+            <div class="row justify-content-center">
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="https://wa.me/573213029272?text=Hola,%20quiero%20información%20sobre%20Roko%20Pet" class="contacto-card" target="_blank">
+                        <i class="bi bi-whatsapp contacto-icono"></i>
+                        <h5>WhatsApp</h5>
+                        <p>+57 321 302 9272</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="mailto:rokopet0816@gmail.com" class="contacto-card">
+                        <i class="bi bi-envelope-fill contacto-icono"></i>
+                        <h5>Correo</h5>
+                        <p>rokopet0816@gmail.com</p>
+                    </a>
+                </div>
+                <div class="col-12 col-md-4 mb-3">
+                    <a href="https://instagram.com/rokopetcol" class="contacto-card" target="_blank">
+                        <i class="bi bi-instagram contacto-icono"></i>
+                        <h5>Instagram</h5>
+                        <p>@rokopetcol</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA -->
+    <footer class="footer-roko py-4 mt-5">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3">Roko Pet</h5>
+                    <p class="text-white-50 small">Comederos personalizados para tu mejor amigo. Hechos con ❤️ en Colombia.</p>
+                </div>
+                <div class="col-12 col-md-4 mb-4 mb-md-0">
+                    <h5 class="text-white mb-3">Enlaces rápidos</h5>
+                    <ul class="list-unstyled">
+                        <li><a href="#bowls" class="footer-link">Bowls</a></li>
+                        <li><a href="#scoops" class="footer-link">Scoops</a></li>
+                        <li><a href="#accesorios" class="footer-link">Accesorios</a></li>
+                        <li><a href="#personalizar" class="footer-link">Personalizar</a></li>
+                        <li><a href="#nosotros" class="footer-link">Nosotros</a></li>
+                        <li><a href="#contacto" class="footer-link">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="col-12 col-md-4">
+                    <h5 class="text-white mb-3">Contáctanos</h5>
+                    <p class="text-white-50 small mb-2">
+                        <i class="bi bi-envelope-fill me-2"></i>
+                        <a href="mailto:rokopet0816@gmail.com" class="footer-link">rokopet0816@gmail.com</a>
+                    </p>
+                    <p class="text-white-50 small mb-2">
+                        <i class="bi bi-whatsapp me-2"></i>
+                        <a href="https://wa.me/573213029272" target="_blank" class="footer-link">+57 321 302 9272</a>
+                    </p>
+                    <p class="text-white-50 small mb-2">
+                        <i class="bi bi-instagram me-2"></i>
+                        <a href="https://instagram.com/rokopetcol" target="_blank" class="footer-link">@rokopetcol</a>
+                    </p>
+                    <p class="text-white-50 small mb-3">
+                        <i class="bi bi-facebook me-2"></i>
+                        <a href="https://www.facebook.com/share/1KUZJwtoS8/" target="_blank" class="footer-link">Roko Pet</a>
+                    </p>
+                    <div class="redes-sociales">
+                        <a href="https://instagram.com/rokopetcol" target="_blank" class="social-icon" title="Instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="https://www.facebook.com/share/1KUZJwtoS8/" target="_blank" class="social-icon" title="Facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="https://wa.me/573213029272" target="_blank" class="social-icon" title="WhatsApp"><i class="bi bi-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <hr class="border-light mt-4">
+            <p class="text-center text-white-50 small mb-0">© 2026 Roko Pet - Todos los derechos reservados.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- JavaScript personalizado -->
+    <script>
+    // ==========================================
+    // MODAL DE PRODUCTO
+    // ==========================================
+    function abrirModal(titulo, imagen, caracteristicas, precio, enlace) {
+        document.getElementById('modal-titulo').textContent = titulo;
+        const contenedorImagen = document.getElementById('modal-imagen-container');
+        const img = document.getElementById('modal-imagen');
+        if (imagen && imagen !== '') {
+            img.src = imagen;
+            img.onerror = function() { contenedorImagen.style.display = 'none'; };
+            img.onload = function() { contenedorImagen.style.display = 'block'; };
+        } else {
+            contenedorImagen.style.display = 'none';
+        }
+        const lista = document.getElementById('modal-lista');
+        lista.innerHTML = '';
+        caracteristicas.forEach(function(carac) {
+            const li = document.createElement('li');
+            li.textContent = carac;
+            lista.appendChild(li);
+        });
+        document.getElementById('modal-producto').style.display = 'flex';
+    }
+    function cerrarModal() {
+        document.getElementById('modal-producto').style.display = 'none';
+    }
+
+    // ==========================================
+    // CARRITO DE COMPRAS
+    // ==========================================
+    let carrito = [];
+
+    window.addEventListener('DOMContentLoaded', function() {
+        const guardado = localStorage.getItem('carritoRokoPet');
+        if (guardado) {
+            carrito = JSON.parse(guardado);
+            actualizarCarrito();
+        }
+        actualizarVistaPrevia();
+    });
+
+    function agregarAlCarrito(nombre, precio, imagen) {
+        const existente = carrito.find(item => item.nombre === nombre);
+        if (existente) {
+            existente.cantidad++;
+        } else {
+            carrito.push({ nombre: nombre, precio: precio, imagen: imagen, cantidad: 1 });
+        }
+        guardarCarrito();
+        actualizarCarrito();
+        mostrarNotificacion(`✅ ${nombre} agregado al carrito`);
+    }
+
+    function quitarDelCarrito(nombre) {
+        carrito = carrito.filter(item => item.nombre !== nombre);
+        guardarCarrito();
+        actualizarCarrito();
+    }
+
+    function cambiarCantidad(nombre, delta) {
+        const item = carrito.find(i => i.nombre === nombre);
+        if (item) {
+            item.cantidad += delta;
+            if (item.cantidad <= 0) {
+                quitarDelCarrito(nombre);
+            } else {
+                guardarCarrito();
+                actualizarCarrito();
+            }
+        }
+    }
+
+    function guardarCarrito() {
+        localStorage.setItem('carritoRokoPet', JSON.stringify(carrito));
+    }
+
+    function actualizarCarrito() {
+        const contenedor = document.getElementById('carrito-items');
+        const vacio = document.getElementById('carrito-vacio');
+        const resumen = document.getElementById('carrito-resumen');
+        const contador = document.getElementById('contador-carrito');
+        const totalItems = carrito.reduce((sum, item) => sum + item.cantidad, 0);
+        if (contador) {
+            contador.textContent = totalItems;
+            contador.style.display = totalItems > 0 ? 'inline-block' : 'none';
+        }
+        if (carrito.length === 0) {
+            vacio.style.display = 'block';
+            resumen.style.display = 'none';
+            contenedor.innerHTML = '';
+            return;
+        }
+        vacio.style.display = 'none';
+        resumen.style.display = 'block';
+        let html = '';
+        let subtotal = 0;
+        carrito.forEach(item => {
+            const itemTotal = item.precio * item.cantidad;
+            subtotal += itemTotal;
+            html += `
+                <div class="carrito-item">
+                    <img src="${item.imagen}" alt="${item.nombre}" class="carrito-item-img">
+                    <div class="carrito-item-info">
+                        <h6>${item.nombre}</h6>
+                        <p class="carrito-item-precio">$${item.precio.toLocaleString('es-CO')} COP</p>
+                        <div class="carrito-item-cantidad">
+                            <button onclick="cambiarCantidad('${item.nombre}', -1)">−</button>
+                            <span>${item.cantidad}</span>
+                            <button onclick="cambiarCantidad('${item.nombre}', 1)">+</button>
+                        </div>
+                    </div>
+                    <div class="carrito-item-acciones">
+                        <strong>$${itemTotal.toLocaleString('es-CO')}</strong>
+                        <button onclick="quitarDelCarrito('${item.nombre}')" class="btn-quitar" title="Quitar"><i class="bi bi-trash"></i></button>
+                    </div>
+                </div>
+            `;
+        });
+        contenedor.innerHTML = html;
+        document.getElementById('carrito-subtotal').textContent = `$${subtotal.toLocaleString('es-CO')} COP`;
+        document.getElementById('carrito-total').textContent = `$${subtotal.toLocaleString('es-CO')} COP`;
+    }
+
+    function abrirCarrito() {
+        document.getElementById('modal-carrito').style.display = 'flex';
+    }
+    function cerrarCarrito() {
+        document.getElementById('modal-carrito').style.display = 'none';
+    }
+
+    function mostrarNotificacion(mensaje) {
+        const notif = document.createElement('div');
+        notif.className = 'notificacion-carrito';
+        notif.textContent = mensaje;
+        document.body.appendChild(notif);
+        setTimeout(() => notif.classList.add('visible'), 10);
+        setTimeout(() => {
+            notif.classList.remove('visible');
+            setTimeout(() => notif.remove(), 300);
+        }, 2500);
+    }
+
+    function finalizarCompra() {
+        const formaPago = document.querySelector('input[name="pago"]:checked').value;
+        const total = carrito.reduce((sum, item) => sum + (item.precio * item.cantidad), 0);
+        let mensaje = '¡Hola Roko Pet! Quiero hacer el siguiente pedido:%0A%0A';
+        carrito.forEach(item => {
+            mensaje += `• ${item.nombre} x${item.cantidad} = $${(item.precio * item.cantidad).toLocaleString('es-CO')}%0A`;
+        });
+        mensaje += `%0A*Total: $${total.toLocaleString('es-CO')} COP*%0A%0A`;
+        mensaje += `*Forma de pago:* `;
+        if (formaPago === 'whatsapp') mensaje += 'Coordinar por WhatsApp%0A%0APor favor, envíenme los datos para realizar el pago. ¡Gracias!';
+        else if (formaPago === 'transferencia') mensaje += 'Transferencia bancaria%0A%0APor favor, envíenme los datos de Nequi, Daviplata o cuenta bancaria para realizar la transferencia. ¡Gracias!';
+        else if (formaPago === 'contraentrega') mensaje += 'Pago contra entrega%0A%0AMi dirección de entrega es: [ESCRIBE TU DIRECCIÓN]%0APor favor, confírmenme la fecha y hora de entrega. ¡Gracias!';
+        const url = `https://wa.me/573213029272?text=${mensaje}`;
+        window.open(url, '_blank');
+    }
+
+    // ==========================================
+    // PERSONALIZACIÓN DE COMEDEROS
+    // ==========================================
+    let colorSeleccionado = '';
+
+    function seleccionarColor(color, boton) {
+    console.log('Color seleccionado:', color);
+    colorSeleccionado = color;
+    
+    // Quitar la clase 'seleccionado' de todos los botones
+    document.querySelectorAll('.color-btn').forEach(btn => {
+        btn.classList.remove('seleccionado');
+    });
+    
+    // Añadir la clase 'seleccionado' al botón clickeado
+    boton.classList.add('seleccionado');
+    
+    // Obtener el color de fondo del botón
+    const colorFondo = boton.style.backgroundColor;
+    
+    // Aplicar el color al fondo de la vista previa
+    const fondoColor = document.getElementById('fondo-color');
+    if (fondoColor) {
+        fondoColor.style.backgroundColor = colorFondo;
+    }
+    
+    // Ajustar el color del texto según el fondo
+    const nombreSuperpuesto = document.getElementById('nombre-superpuesto');
+    if (nombreSuperpuesto) {
+        if (color === 'Negro' || color === 'Marrón' || color === 'Azul') {
+            nombreSuperpuesto.style.color = '#ffffff';
+            nombreSuperpuesto.style.textShadow = '0 2px 5px rgba(0, 0, 0, 0.5)';
+        } else {
+            nombreSuperpuesto.style.color = '#4a3525';
+            nombreSuperpuesto.style.textShadow = '0 2px 5px rgba(255, 255, 255, 0.8)';
+        }
+    }
+    
+    // Actualizar el texto del color seleccionado
+    document.getElementById('color-seleccionado').innerHTML = 
+        `Color: <strong>${color}</strong>`;
+}
+
+    function actualizarVistaPrevia() {
+    const nombre = document.getElementById('nombre-mascota').value.trim();
+    const tipografia = document.getElementById('tipografia').value;
+    const nombreSuperpuesto = document.getElementById('nombre-superpuesto');
+    const imagenProducto = document.getElementById('imagen-producto');
+    const precioElement = document.getElementById('precio-personalizado');
+    const select = document.getElementById('producto-personalizar');
+    const opcion = select.options[select.selectedIndex];
+    
+    // Actualizar el nombre en la vista previa
+    if (nombre) {
+        nombreSuperpuesto.textContent = nombre;
+    } else {
+        nombreSuperpuesto.textContent = 'Tu mascota';
+    }
+    
+    // Aplicar la tipografía seleccionada
+    nombreSuperpuesto.style.fontFamily = tipografia;
+    
+    // *** CAMBIO: SIEMPRE usar la imagen de la paleta de colores ***
+    imagenProducto.src = 'img/paleta-colores.jpeg';
+    
+    // Actualizar el precio
+    if (select.value && opcion.dataset.precio) {
+        const precio = parseInt(opcion.dataset.precio);
+        precioElement.textContent = `$${precio.toLocaleString('es-CO')} COP`;
+    } else {
+        precioElement.textContent = '$0 COP';
+    }
+}
+
+    function agregarPersonalizado() {
+    const select = document.getElementById('producto-personalizar');
+    const nombre = document.getElementById('nombre-mascota').value.trim();
+    const tipografiaSelect = document.getElementById('tipografia');
+    const tipografiaNombre = tipografiaSelect.options[tipografiaSelect.selectedIndex].text;
+    
+    if (!select.value) {
+        alert('⚠️ Por favor, selecciona un producto.');
+        return;
+    }
+    if (!colorSeleccionado) {
+        alert('⚠️ Por favor, selecciona un color para tu comedero.');
+        return;
+    }
+    if (!nombre) {
+        alert('⚠️ Por favor, escribe el nombre de tu mascota.');
+        return;
+    }
+    if (nombre.length > 12) {
+        alert('⚠️ El nombre no puede tener más de 12 caracteres.');
+        return;
+    }
+    
+    const opcion = select.options[select.selectedIndex];
+    const precio = parseInt(opcion.dataset.precio);
+    const imagen = opcion.dataset.imagen;
+    
+    const nombrePersonalizado = `${select.value} - "${nombre.toUpperCase()}" - Color: ${colorSeleccionado} - Letra: ${tipografiaNombre}`;
+    
+    agregarAlCarrito(nombrePersonalizado, precio, imagen);
+    
+    // Limpiar el formulario
+    select.value = '';
+    document.getElementById('nombre-mascota').value = '';
+    document.getElementById('tipografia').selectedIndex = 0;
+    document.querySelectorAll('.color-btn').forEach(btn => btn.classList.remove('seleccionado'));
+    colorSeleccionado = '';
+    document.getElementById('color-seleccionado').innerHTML = 'Color: <strong>No seleccionado</strong>';
+    
+    // Limpiar el fondo
+    document.getElementById('fondo-color').style.backgroundColor = '#f5f5f0';
+    document.getElementById('nombre-superpuesto').style.color = '#4a3525';
+    document.getElementById('nombre-superpuesto').style.textShadow = '0 2px 5px rgba(255, 255, 255, 0.8)';
+    
+    actualizarVistaPrevia();
+    
+    mostrarNotificacion(`✅ Producto personalizado agregado al carrito`);
+}
+
+    // Cerrar modales al hacer clic fuera
+    window.addEventListener('click', function(event) {
+        const modalProducto = document.getElementById('modal-producto');
+        const modalCarrito = document.getElementById('modal-carrito');
+        if (event.target === modalProducto) cerrarModal();
+        if (event.target === modalCarrito) cerrarCarrito();
+    });
+    </script>
+
+</body>
+</html>
