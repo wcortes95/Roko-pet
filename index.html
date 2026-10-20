@@ -507,40 +507,49 @@
         </p>
         
         <div class="row justify-content-center">
-            <div class="col-12 col-lg-10">
-                <div class="personalizar-card">
-                    <div class="row g-4">
+    <div class="col-12 col-lg-10">
+        <div class="personalizar-card">
+            <div class="row g-4">
+                
+                <!-- COLUMNA IZQUIERDA: Vista previa -->
+                <div class="col-12 col-md-6">
+                    <div class="vista-previa-contenedor">
+                        <p class="vista-previa-label">Vista previa:</p>
                         
-                        <!-- COLUMNA IZQUIERDA: Vista previa -->
-                        <div class="col-12 col-md-6">
-                            <div class="vista-previa-contenedor">
-                                <p class="vista-previa-label">Vista previa:</p>
-                                
-                                <div class="contenedor-comedero" id="vista-previa-imagen">
-    
-                                    <!-- Mensaje inicial -->
-                                    <div id="mensaje-inicial" style="text-align: center; color: #888; z-index: 1; margin-top: 100px;">
-                                        <i class="bi bi-arrow-up-circle" style="font-size: 2em;"></i><br>
-                                        Selecciona un producto
-                                    </div>
-
-                                    <!-- Capa 1: Base (Oculta al inicio) -->
-                                    <img id="img-base-preview" src="" class="img-comedero" style="display: none;">
-                                    <div id="capa-color-base" class="capa-color" style="display: none;"></div>
-                                    
-                                    <!-- Capa 2: Cuerpo (Oculto al inicio) -->
-                                    <img id="img-cuerpo-preview" src="" class="img-comedero" style="display: none;">
-                                    <div id="capa-color-cuerpo" class="capa-color" style="display: none;"></div>
-                                    
-                                    <!-- Capa 3: Nombre (Oculto al inicio) -->
-                                    <div class="nombre-superpuesto" id="nombre-superpuesto" style="display: none;">Tu mascota</div>
-                                </div>
-                                
-                                <div class="color-seleccionado" id="color-seleccionado">
-                                    Color: <strong>No seleccionado</strong>
-                                </div>
+                        <div class="contenedor-comedero" id="vista-previa-imagen">
+                            <!-- Mensaje inicial -->
+                            <div id="mensaje-inicial" style="text-align: center; color: #888; z-index: 1; margin-top: 100px;">
+                                <i class="bi bi-arrow-up-circle" style="font-size: 2em;"></i><br>
+                                Selecciona un producto
                             </div>
+
+                            <!-- Capa 1: Base -->
+                            <img id="img-base-preview" src="" class="img-comedero" style="display: none;">
+                            <div id="capa-color-base" class="capa-color" style="display: none;"></div>
+                            
+                            <!-- Capa 2: Cuerpo -->
+                            <img id="img-cuerpo-preview" src="" class="img-comedero" style="display: none;">
+                            <div id="capa-color-cuerpo" class="capa-color" style="display: none;"></div>
+                            
+                            <!-- Capa 3: Nombre -->
+                            <div class="nombre-superpuesto" id="nombre-superpuesto" style="display: none;">Tu mascota</div>
                         </div>
+                        
+                        <div class="color-seleccionado" id="color-seleccionado">
+                            Color: <strong>No seleccionado</strong>
+                        </div>
+                    </div>
+                </div> <!-- CIERRE COLUMNA IZQUIERDA -->
+
+                <!-- COLUMNA DERECHA: Formulario -->
+                <div class="col-12 col-md-6">
+                    <!-- ... todo tu formulario de producto, colores, etc ... -->
+                </div> <!-- CIERRE COLUMNA DERECHA -->
+
+            </div> <!-- CIERRE ROW G-4 -->
+        </div> <!-- CIERRE PERSONALIZAR-CARD -->
+    </div> <!-- CIERRE COL-LG-10 -->
+</div> <!-- CIERRE ROW JUSTIFY-CONTENT-CENTER -->
                         
                         <!-- COLUMNA DERECHA: Formulario -->
                         <div class="col-12 col-md-6">

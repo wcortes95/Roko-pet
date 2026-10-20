@@ -875,20 +875,22 @@ main {
     }
 
 /* ==========================================
-   FORZAR VISTA PREVIA EN LA WEB
+   VISTA PREVIA - FORZAR TAMAÑOS
    ========================================== */
+#vista-previa-imagen, 
 .contenedor-comedero {
     position: relative !important;
     width: 100% !important;
-    height: 280px !important;       /* Altura fija */
-    max-height: 280px !important;
-    overflow: hidden !important;    /* Corta lo que se salga */
+    height: 300px !important;       /* Altura fija y estricta */
+    max-height: 300px !important;
+    overflow: hidden !important;    /* Corta cualquier cosa que se salga */
     background-color: #ffffff !important;
     border-radius: 12px !important;
     display: flex !important;
     justify-content: center !important;
     align-items: center !important;
     box-shadow: inset 0 0 0 2px #e0d8cc !important;
+    margin-bottom: 20px !important;
 }
 
 .img-comedero {
@@ -897,7 +899,7 @@ main {
     left: 0 !important;
     width: 100% !important;
     height: 100% !important;
-    object-fit: contain !important; /* Ajusta la imagen sin deformarla */
+    object-fit: contain !important; /* La imagen se adapta a la caja */
     z-index: 2 !important;
 }
 
@@ -917,7 +919,6 @@ main {
     mix-blend-mode: multiply !important; 
     opacity: 0.85 !important;
     pointer-events: none !important;
-    transition: background-color 0.3s ease !important;
 }
 
 .contenedor-comedero .nombre-superpuesto {
