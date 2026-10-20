@@ -539,45 +539,6 @@ main {
     text-align: center;
 }
 
-.vista-previa-imagen {
-    position: relative;
-    width: 100%;
-    height: 280px;
-    background-color: white;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-}
-
-/* Vista previa con color de fondo */
-.vista-previa-imagen {
-    position: relative;
-    width: 100%;
-    height: 280px;
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-bottom: 15px;
-    box-shadow: inset 0 0 0 2px #e0d8cc;
-}
-
-/* Fondo de color (cambia según la selección) */
-.fondo-color {
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    background-color: #f5f5f0;
-    transition: background-color 0.3s ease;
-    border-radius: 12px;
-}
-
 /* Nombre superpuesto */
 .nombre-superpuesto {
     font-size: 2.5em;
@@ -788,6 +749,73 @@ main {
 }
 
 /* ==========================================
+   VISTA PREVIA INTERACTIVA (FUERA DE @MEDIA)
+   ========================================== */
+#vista-previa-imagen, 
+.contenedor-comedero {
+    position: relative !important;
+    width: 100% !important;
+    height: 300px !important;       /* Altura fija y estricta */
+    max-height: 300px !important;
+    overflow: hidden !important;    /* Corta cualquier cosa que se salga */
+    background-color: #ffffff !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: inset 0 0 0 2px #e0d8cc !important;
+    margin-bottom: 20px !important;
+}
+
+.img-comedero {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* La imagen se adapta a la caja */
+    z-index: 2 !important;
+}
+
+.capa-color {
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 3 !important;
+    mask-size: contain !important;
+    mask-position: center !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-size: contain !important;
+    -webkit-mask-position: center !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mix-blend-mode: multiply !important; 
+    opacity: 0.85 !important;
+    pointer-events: none !important;
+}
+
+.contenedor-comedero .nombre-superpuesto {
+    position: absolute !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 4 !important;
+    text-align: center !important;
+    width: 80% !important;
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    color: #4a3525 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8) !important;
+    transition: font-family 0.3s ease, top 0.3s ease !important;
+    pointer-events: none !important;
+}
+
+/* ==========================================
    RESPONSIVE (Para celulares)
    ========================================== */
 @media (max-width: 768px) {
@@ -873,71 +901,4 @@ main {
         width: 35px;
         height: 35px;
     }
-
-/* ==========================================
-   VISTA PREVIA - FORZAR TAMAÑOS
-   ========================================== */
-#vista-previa-imagen, 
-.contenedor-comedero {
-    position: relative !important;
-    width: 100% !important;
-    height: 300px !important;       /* Altura fija y estricta */
-    max-height: 300px !important;
-    overflow: hidden !important;    /* Corta cualquier cosa que se salga */
-    background-color: #ffffff !important;
-    border-radius: 12px !important;
-    display: flex !important;
-    justify-content: center !important;
-    align-items: center !important;
-    box-shadow: inset 0 0 0 2px #e0d8cc !important;
-    margin-bottom: 20px !important;
-}
-
-.img-comedero {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    object-fit: contain !important; /* La imagen se adapta a la caja */
-    z-index: 2 !important;
-}
-
-.capa-color {
-    position: absolute !important;
-    top: 0 !important;
-    left: 0 !important;
-    width: 100% !important;
-    height: 100% !important;
-    z-index: 3 !important;
-    mask-size: contain !important;
-    mask-position: center !important;
-    mask-repeat: no-repeat !important;
-    -webkit-mask-size: contain !important;
-    -webkit-mask-position: center !important;
-    -webkit-mask-repeat: no-repeat !important;
-    mix-blend-mode: multiply !important; 
-    opacity: 0.85 !important;
-    pointer-events: none !important;
-}
-
-.contenedor-comedero .nombre-superpuesto {
-    position: absolute !important;
-    left: 50% !important;
-    transform: translate(-50%, -50%) !important;
-    z-index: 4 !important;
-    text-align: center !important;
-    width: 80% !important;
-    font-size: 1.2em !important;
-    font-weight: bold !important;
-    color: #4a3525 !important;
-    text-transform: uppercase !important;
-    letter-spacing: 2px !important;
-    white-space: nowrap !important;
-    overflow: hidden !important;
-    text-overflow: ellipsis !important;
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8) !important;
-    transition: font-family 0.3s ease, top 0.3s ease !important;
-    pointer-events: none !important;
-}
-}
+} /* <--- ESTA ES LA LLAVE QUE FALTABA */
