@@ -875,72 +875,68 @@ main {
     }
 
 /* ==========================================
-   VISTA PREVIA INTERACTIVA CON CAPAS (CORREGIDO)
+   FORZAR VISTA PREVIA EN LA WEB
    ========================================== */
 .contenedor-comedero {
-    position: relative;
-    width: 100%;
-    height: 280px;
-    background-color: #ffffff; /* Fondo blanco para que no se tiña */
-    border-radius: 12px;
-    overflow: hidden;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: inset 0 0 0 2px #e0d8cc;
+    position: relative !important;
+    width: 100% !important;
+    height: 280px !important;       /* Altura fija */
+    max-height: 280px !important;
+    overflow: hidden !important;    /* Corta lo que se salga */
+    background-color: #ffffff !important;
+    border-radius: 12px !important;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+    box-shadow: inset 0 0 0 2px #e0d8cc !important;
 }
 
 .img-comedero {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-    z-index: 2; /* Las imágenes base están en el medio */
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    object-fit: contain !important; /* Ajusta la imagen sin deformarla */
+    z-index: 2 !important;
 }
 
-/* La magia de la máscara */
 .capa-color {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 3; 
-    mask-size: contain;
-    mask-position: center;
-    mask-repeat: no-repeat;
-    -webkit-mask-size: contain;
-    -webkit-mask-position: center;
-    -webkit-mask-repeat: no-repeat;
-    mix-blend-mode: multiply; 
-    opacity: 0.85;
-    pointer-events: none;
-    transition: background-color 0.3s ease;
+    position: absolute !important;
+    top: 0 !important;
+    left: 0 !important;
+    width: 100% !important;
+    height: 100% !important;
+    z-index: 3 !important;
+    mask-size: contain !important;
+    mask-position: center !important;
+    mask-repeat: no-repeat !important;
+    -webkit-mask-size: contain !important;
+    -webkit-mask-position: center !important;
+    -webkit-mask-repeat: no-repeat !important;
+    mix-blend-mode: multiply !important; 
+    opacity: 0.85 !important;
+    pointer-events: none !important;
+    transition: background-color 0.3s ease !important;
 }
 
-
-/* El texto debe estar por encima de las capas de color */
-/* El texto debe estar por encima de las capas de color */
 .contenedor-comedero .nombre-superpuesto {
-    position: absolute;
-    /* NO PONGAS top: 45%; AQUÍ */
-    left: 50%;
-    transform: translate(-50%, -50%); /* Esto centra el texto exactamente en el punto que le diga el JS */
-    z-index: 4;
-    text-align: center;
-    width: 80%;
-    font-size: 1.2em;
-    font-weight: bold;
-    color: #4a3525;
-    text-transform: uppercase;
-    letter-spacing: 2px;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
-    transition: font-family 0.3s ease, top 0.3s ease; /* Esto hace que el texto se deslice suavemente de una posición a otra al cambiar de producto */
-    pointer-events: none;
+    position: absolute !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    z-index: 4 !important;
+    text-align: center !important;
+    width: 80% !important;
+    font-size: 1.2em !important;
+    font-weight: bold !important;
+    color: #4a3525 !important;
+    text-transform: uppercase !important;
+    letter-spacing: 2px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8) !important;
+    transition: font-family 0.3s ease, top 0.3s ease !important;
+    pointer-events: none !important;
 }
 }
