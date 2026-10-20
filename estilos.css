@@ -873,4 +873,74 @@ main {
         width: 35px;
         height: 35px;
     }
+
+/* ==========================================
+   VISTA PREVIA INTERACTIVA CON CAPAS (CORREGIDO)
+   ========================================== */
+.contenedor-comedero {
+    position: relative;
+    width: 100%;
+    height: 280px;
+    background-color: #ffffff; /* Fondo blanco para que no se tiña */
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-shadow: inset 0 0 0 2px #e0d8cc;
+}
+
+.img-comedero {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    z-index: 2; /* Las imágenes base están en el medio */
+}
+
+/* La magia de la máscara */
+.capa-color {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 3; 
+    mask-size: contain;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    -webkit-mask-size: contain;
+    -webkit-mask-position: center;
+    -webkit-mask-repeat: no-repeat;
+    mix-blend-mode: multiply; 
+    opacity: 0.85;
+    pointer-events: none;
+    transition: background-color 0.3s ease;
+}
+
+
+/* El texto debe estar por encima de las capas de color */
+/* El texto debe estar por encima de las capas de color */
+.contenedor-comedero .nombre-superpuesto {
+    position: absolute;
+    /* NO PONGAS top: 45%; AQUÍ */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Esto centra el texto exactamente en el punto que le diga el JS */
+    z-index: 4;
+    text-align: center;
+    width: 80%;
+    font-size: 1.2em;
+    font-weight: bold;
+    color: #4a3525;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-shadow: 0 2px 4px rgba(255, 255, 255, 0.8);
+    transition: font-family 0.3s ease, top 0.3s ease; /* Esto hace que el texto se deslice suavemente de una posición a otra al cambiar de producto */
+    pointer-events: none;
+}
 }
