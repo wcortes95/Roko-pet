@@ -499,6 +499,9 @@
         <!-- ============================================ -->
 <!-- SECCIÓN: PERSONALIZAR COMEDERO                -->
 <!-- ============================================ -->
+<!-- ============================================ -->
+<!-- SECCIÓN: PERSONALIZAR COMEDERO               -->
+<!-- ============================================ -->
 <section class="personalizar py-5" id="personalizar">
     <div class="container">
         <h2 class="personalizar-titulo">✨ Personaliza tu Comedero</h2>
@@ -507,49 +510,161 @@
         </p>
         
         <div class="row justify-content-center">
-    <div class="col-12 col-lg-10">
-        <div class="personalizar-card">
-            <div class="row g-4">
-                
-                <!-- COLUMNA IZQUIERDA: Vista previa -->
-                <div class="col-12 col-md-6">
-                    <div class="vista-previa-contenedor">
-                        <p class="vista-previa-label">Vista previa:</p>
+            <div class="col-12 col-lg-10">
+                <div class="personalizar-card">
+                    <div class="row g-4">
                         
-                        <div class="contenedor-comedero" id="vista-previa-imagen">
-                            <!-- Mensaje inicial -->
-                            <div id="mensaje-inicial" style="text-align: center; color: #888; z-index: 1; margin-top: 100px;">
-                                <i class="bi bi-arrow-up-circle" style="font-size: 2em;"></i><br>
-                                Selecciona un producto
+                        <!-- COLUMNA IZQUIERDA: Vista previa -->
+                        <div class="col-12 col-md-6">
+                            <div class="vista-previa-contenedor">
+                                <p class="vista-previa-label">Vista previa:</p>
+                                
+                                <div class="contenedor-comedero" id="vista-previa-imagen">
+                                    <!-- Mensaje inicial -->
+                                    <div id="mensaje-inicial" style="text-align: center; color: #888; z-index: 1; margin-top: 100px;">
+                                        <i class="bi bi-arrow-up-circle" style="font-size: 2em;"></i><br>
+                                        Selecciona un producto
+                                    </div>
+
+                                    <!-- Capa 1: Base -->
+                                    <img id="img-base-preview" src="" class="img-comedero" style="display: none;">
+                                    <div id="capa-color-base" class="capa-color" style="display: none;"></div>
+                                    
+                                    <!-- Capa 2: Cuerpo -->
+                                    <img id="img-cuerpo-preview" src="" class="img-comedero" style="display: none;">
+                                    <div id="capa-color-cuerpo" class="capa-color" style="display: none;"></div>
+                                    
+                                    <!-- Capa 3: Nombre -->
+                                    <div class="nombre-superpuesto" id="nombre-superpuesto" style="display: none;">Tu mascota</div>
+                                </div>
+                                
+                                <div class="color-seleccionado" id="color-seleccionado">
+                                    Color: <strong>No seleccionado</strong>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- COLUMNA DERECHA: Formulario -->
+                        <div class="col-12 col-md-6">
+                            
+                            <!-- Selector de producto -->
+                            <div class="mb-3">
+                                <label for="producto-personalizar" class="form-label">
+                                    <i class="bi bi-box-seam me-2"></i>Producto
+                                </label>
+                                <select id="producto-personalizar" class="form-select" onchange="actualizarVistaPrevia()">
+                                    <option value="">-- Selecciona un producto --</option>
+                                    
+                                    <!-- CLASICOS -->
+                                    <option value="Classic Large 101" data-precio="95000" data-cuerpo="img/personalizar/classic-101-cuerpo.png" data-base="img/personalizar/classic-101-base.png" data-texto-top="45%">Classic Large 101</option>
+                                    <option value="Classic Extra Large 102" data-precio="50000" data-cuerpo="img/personalizar/classic-102.png" data-texto-top="53%">Classic Extra Large 102</option>
+                                    <option value="Classic Medium 103" data-precio="48000" data-cuerpo="img/personalizar/classic-103-cuerpo.png" data-base="img/personalizar/classic-103-base.png" data-texto-top="55%">Classic Medium 103</option>
+                                    <option value="Classic Medium 104" data-precio="85000" data-cuerpo="img/personalizar/classic-104-completo.png" data-texto-top="55%">Classic Medium 104</option>
+                                    
+                                    <!-- BUBBLE -->
+                                    <option value="Bubble Ribbed 109" data-precio="70000" data-cuerpo="img/personalizar/bubble-109-cuerpo.png" data-base="img/personalizar/bubble-109-base.png" data-texto-top="70%">Bubble Ribbed 109</option>
+                                    <option value="Bubble Ribbed 110" data-precio="74000" data-cuerpo="img/personalizar/bubble-110-cuerpo.png" data-base="img/personalizar/bubble-110-base.png" data-texto-top="45%">Bubble Ribbed 110</option>
+                                    <option value="Bubble Ribbed 111" data-precio="53000" data-cuerpo="img/personalizar/bubble-111-completo.png" data-texto-top="67%">Bubble Ribbed 111</option>
+                                    <option value="Bubble Ribbed 112" data-precio="51000" data-cuerpo="img/personalizar/bubble-112-completo.png" data-texto-top="66%">Bubble Ribbed 112</option>
+
+                                    <!-- DUO -->
+                                    <option value="Duo Ribbed 113" data-precio="100000" data-cuerpo="img/personalizar/duo-113-completo.png" data-texto-top="55%">Duo Ribbed 113</option>
+                                    <option value="Duo 114" data-precio="100000" data-cuerpo="img/personalizar/duo-114-completo.png" data-texto-top="58%">Duo 114</option>
+                                    <option value="Duo 115" data-precio="85000" data-cuerpo="img/personalizar/duo-115-completo.png" data-texto-top="35%">Duo 115</option>
+
+                                    <!-- WAVE -->
+                                    <option value="Wave Ribbed 105" data-precio="88000" data-cuerpo="img/personalizar/wave-105-cuerpo.png" data-base="img/personalizar/wave-105-base.png" data-texto-top="55%">Wave Ribbed 105</option>
+                                    <option value="Wave 107" data-precio="73000" data-cuerpo="img/personalizar/wave-107-cuerpo.png" data-base="img/personalizar/wave-107-base.png" data-texto-top="55%">Wave 107</option>
+                                    <option value="Wave 108" data-precio="96000" data-cuerpo="img/personalizar/wave-108-cuerpo.png" data-base="img/personalizar/wave-108-base.png" data-texto-top="55%">Wave 108</option>
+                                    <option value="Wave Ribbed 109" data-precio="88000" data-cuerpo="img/personalizar/wave-109-cuerpo.png" data-base="img/personalizar/wave-109-base.png" data-texto-top="50%">Wave Ribbed 109</option>
+                                </select>
+                            </div>
+                            
+                            <!-- Selector de Color para el CUERPO -->
+                            <div class="mb-3">
+                                <label class="form-label">
+                                    <i class="bi bi-palette me-2"></i>Color del cuerpo
+                                </label>
+                                <div class="selector-color" id="selector-color-cuerpo">
+                                    <button type="button" class="color-btn" data-color="Beige" style="background-color: #d4c5a9;" title="Beige" onclick="seleccionarColor('Beige', this, 'cuerpo')"></button>
+                                    <button type="button" class="color-btn" data-color="Verde oliva" style="background-color: #6b7a4a;" title="Verde oliva" onclick="seleccionarColor('Verde oliva', this, 'cuerpo')"></button>
+                                    <button type="button" class="color-btn" data-color="Marrón" style="background-color: #8b6f47;" title="Marrón" onclick="seleccionarColor('Marrón', this, 'cuerpo')"></button>
+                                    <button type="button" class="color-btn" data-color="Negro" style="background-color: #333333;" title="Negro" onclick="seleccionarColor('Negro', this, 'cuerpo')"></button>
+                                    <button type="button" class="color-btn" data-color="Gris" style="background-color: #999999;" title="Gris" onclick="seleccionarColor('Gris', this, 'cuerpo')"></button>
+                                    <button type="button" class="color-btn" data-color="Azul" style="background-color: #4a6fa5;" title="Azul" onclick="seleccionarColor('Azul', this, 'cuerpo')"></button>
+                                    <button type="button" class="color-btn" data-color="Rosa" style="background-color: #e8a5b8;" title="Rosa" onclick="seleccionarColor('Rosa', this, 'cuerpo')"></button>
+                                    <button type="button" class="color-btn" data-color="Amarillo" style="background-color: #f0d264;" title="Amarillo" onclick="seleccionarColor('Amarillo', this, 'cuerpo')"></button>
+                                </div>
+                                <div class="color-seleccionado mt-2" id="color-seleccionado-cuerpo">
+                                    Color cuerpo: <strong>No seleccionado</strong>
+                                </div>
                             </div>
 
-                            <!-- Capa 1: Base -->
-                            <img id="img-base-preview" src="" class="img-comedero" style="display: none;">
-                            <div id="capa-color-base" class="capa-color" style="display: none;"></div>
+                            <!-- Selector de Color para la BASE -->
+                            <div class="mb-3">
+                                <label class="form-label">
+                                    <i class="bi bi-palette me-2"></i>Color de la base
+                                </label>
+                                <div class="selector-color" id="selector-color-base">
+                                    <button type="button" class="color-btn" data-color="Beige" style="background-color: #d4c5a9;" title="Beige" onclick="seleccionarColor('Beige', this, 'base')"></button>
+                                    <button type="button" class="color-btn" data-color="Verde oliva" style="background-color: #6b7a4a;" title="Verde oliva" onclick="seleccionarColor('Verde oliva', this, 'base')"></button>
+                                    <button type="button" class="color-btn" data-color="Marrón" style="background-color: #8b6f47;" title="Marrón" onclick="seleccionarColor('Marrón', this, 'base')"></button>
+                                    <button type="button" class="color-btn" data-color="Negro" style="background-color: #333333;" title="Negro" onclick="seleccionarColor('Negro', this, 'base')"></button>
+                                    <button type="button" class="color-btn" data-color="Gris" style="background-color: #999999;" title="Gris" onclick="seleccionarColor('Gris', this, 'base')"></button>
+                                    <button type="button" class="color-btn" data-color="Azul" style="background-color: #4a6fa5;" title="Azul" onclick="seleccionarColor('Azul', this, 'base')"></button>
+                                    <button type="button" class="color-btn" data-color="Rosa" style="background-color: #e8a5b8;" title="Rosa" onclick="seleccionarColor('Rosa', this, 'base')"></button>
+                                    <button type="button" class="color-btn" data-color="Amarillo" style="background-color: #f0d264;" title="Amarillo" onclick="seleccionarColor('Amarillo', this, 'base')"></button>
+                                </div>
+                                <div class="color-seleccionado mt-2" id="color-seleccionado-base">
+                                    Color base: <strong>No seleccionado</strong>
+                                </div>
+                            </div>
+                                                        
+                            <!-- Campo del nombre -->
+                            <div class="mb-3">
+                                <label for="nombre-mascota" class="form-label">
+                                    <i class="bi bi-pencil me-2"></i>Nombre de tu mascota
+                                </label>
+                                <input type="text" id="nombre-mascota" class="form-control" 
+                                       placeholder="Ej: Roko, Luna, Max..." 
+                                       maxlength="12"
+                                       oninput="actualizarVistaPrevia()">
+                                <small class="text-muted">Máximo 12 caracteres</small>
+                            </div>
                             
-                            <!-- Capa 2: Cuerpo -->
-                            <img id="img-cuerpo-preview" src="" class="img-comedero" style="display: none;">
-                            <div id="capa-color-cuerpo" class="capa-color" style="display: none;"></div>
+                            <!-- Selector de tipografía -->
+                            <div class="mb-3">
+                                <label for="tipografia" class="form-label">
+                                    <i class="bi bi-fonts me-2"></i>Tipo de letra
+                                </label>
+                                <select id="tipografia" class="form-select" onchange="actualizarVistaPrevia()">
+                                    <option value="'Segoe UI', sans-serif">Moderna (sans-serif)</option>
+                                    <option value="'Georgia', serif">Elegante (serif)</option>
+                                    <option value="'Courier New', monospace">Técnica (monospace)</option>
+                                    <option value="'Brush Script MT', cursive">Manuscrita (cursive)</option>
+                                    <option value="'Impact', sans-serif">Impacto (bold)</option>
+                                    <option value="'Trebuchet MS', sans-serif">Amigable (rounded)</option>
+                                </select>
+                            </div>
                             
-                            <!-- Capa 3: Nombre -->
-                            <div class="nombre-superpuesto" id="nombre-superpuesto" style="display: none;">Tu mascota</div>
-                        </div>
-                        
-                        <div class="color-seleccionado" id="color-seleccionado">
-                            Color: <strong>No seleccionado</strong>
+                            <!-- Precio total -->
+                            <div class="d-flex justify-content-between align-items-center mb-3">
+                                <span>Total:</span>
+                                <strong id="precio-personalizado" class="precio">$0 COP</strong>
+                            </div>
+                            
+                            <!-- Botón agregar -->
+                            <button onclick="agregarPersonalizado()" class="btn btn-success w-100">
+                                <i class="bi bi-cart-plus me-2"></i>Agregar al carrito
+                            </button>
+                            
                         </div>
                     </div>
-                </div> <!-- CIERRE COLUMNA IZQUIERDA -->
-
-                <!-- COLUMNA DERECHA: Formulario -->
-                <div class="col-12 col-md-6">
-                    <!-- ... todo tu formulario de producto, colores, etc ... -->
-                </div> <!-- CIERRE COLUMNA DERECHA -->
-
-            </div> <!-- CIERRE ROW G-4 -->
-        </div> <!-- CIERRE PERSONALIZAR-CARD -->
-    </div> <!-- CIERRE COL-LG-10 -->
-</div> <!-- CIERRE ROW JUSTIFY-CONTENT-CENTER -->
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
                         
                         <!-- COLUMNA DERECHA: Formulario -->
                         <div class="col-12 col-md-6">
